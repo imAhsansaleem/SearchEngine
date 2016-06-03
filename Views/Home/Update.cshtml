@@ -1,0 +1,16 @@
+﻿@model MvcApplication7.Models.Event
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+<form action="/Home/UpdateConfirm/@Model.Id" method="post">
+     
+    Name <input type="text" name="Name" value ="@Model.Name" /> <br/ >
+    Date <input type="text" name="Date" value ="@Model.Date" /> <br/ >
+    Duration<input type="text" name="Duration" value ="@Model.Duration" /> <br/ >
+
+    <input type ="submit" value="Update" />
+
+</form>

@@ -1,0 +1,392 @@
+﻿
+
+    <head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    
+    
+    <link rel="stylesheet" href="~/Contents/reset.css">
+
+    
+        <link rel="stylesheet" href="~/Contents/style.css">
+
+  </head>
+
+<body bgcolor="gainsboro">
+
+  <div align="center" >
+<h1 align="center">  </h1>
+
+</div>
+
+
+
+
+<head>
+<style>
+#header {
+    background-color:skyblue;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:skyblue;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+</head>
+
+
+
+
+
+@{
+    
+    ViewBag.title = "Admin";
+    }
+@*<h2>Admin</h2>*@
+
+    <body bgcolor="gainsboro">
+
+  <div align="center" >
+<h1 align="center">  </h1>
+
+</div>
+
+
+
+
+<head>
+<style>
+#header {
+    background-color:skyblue;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:skyblue;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+</head>
+<body>
+
+<div id="header">
+<h1>Login(Only For Admin)</h1>
+ 
+</div>
+
+
+
+
+
+
+
+
+
+ <head>
+  <title>Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+
+    <div class="container">
+  @*<h1>Login</h1>*@
+  <!-- Trigger the modal with a button -->
+        <li><a href=""><span class="glyphicon glyphicon-user"></span>log in</a></li>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">click here to login</button>
+         
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">login to continue</h4>
+        </div>
+        <div class="modal-body">
+          
+            <form action="/Home/Login" method="post">
+
+
+
+<table border="0" width ="100%" align="center">
+<tr>
+<td>  Name: </td> 
+<td><input type= "text" name="t1" required/> </td>
+</tr>
+<tr>  <td> <br> </td> </tr>
+<tr>
+<td> Password: </td> 
+<td><input type="password" name="t2" required/> </td>
+</tr>
+
+
+</table>
+
+                        <div class="container">
+                     
+                       <td><input type="submit" class="btn btn-info" value="Submit "></td>
+
+                       </div>
+
+@*<p>
+<input type='submit' id='submit' name="submit" value ='submit'> </p>*@
+
+</form>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <body bgcolor="gainsboro">
+
+  <div align="center" >
+<h1 align="center">  </h1>
+
+</div>
+
+
+
+
+<head>
+<style>
+#header {
+    background-color:skyblue;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:skyblue;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+</head>
+<body>
+
+<div id="header">
+<h1>Wedding Schedule</h1>
+
+</div>
+
+
+<table border="0" width ="100%" align="center">
+    
+  <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Date</td>
+      <td>Duration</td>
+      
+
+  </tr>  
+    
+    @foreach (var e in Model)
+    
+    { 
+    <tr>
+        <td>@e.Id</td>
+        <td>@e.Name</td> 
+        <td>@e.Date</td> 
+        <td>@e.Duration</td> 
+
+
+        
+
+@*     <td>
+
+            <a href="/Home/Update/@e.Id">Update<a/>
+                 <a href="/Home/Delete/@e.Id">Delete<a/>
+        </td>*@
+
+    </tr>
+    
+    }
+
+
+</table>
+    @*
+                <form action="/Home/AddEvent"   method="post">
+                    <br/>
+                   <table border="0" width ="100%" align="center">
+                    
+                    <td>Name : </td>
+                       <td><input type="text" name="t1" align="center" /> </td>
+                    
+                       <tr>  <td> <br> </td> </tr>
+                        
+                       
+                       <td>Date :</td>
+
+                       
+                     <td><input type="text" name="t2" /> </td>
+
+                       <tr>  <td> <br> </td> </tr>
+
+                         <td>Duration :</td>
+
+                       
+                     <td><input type="text" name="t3" /> </td>
+
+                       <tr>  <td> <br> </td> </tr>
+
+                   
+
+
+                   <div class="container">
+                     
+
+                       <td><input type="submit" class="btn btn-info" value="Submit "></td>
+
+                       </div>
+                        </table>
+
+                    <input type="submit" value="Add" />
+</form>*@
+
+
+
+    <div class= "footer">
+		 <div class="container">                                                   
+			<div class="col-md-3 footer-grid">
+					<div class="logo two">
+						<a href="~/Home/Index"><h3>Liberty<span>Castle</span></h3></a>
+					</div>
+				</div>
+				<div class=" col-md-3 footer-grid footer-grid2">
+					<div class="bottom-nav">
+					       <h4>LEARN</h4>
+							<ul>
+							<li><a class="active" href="~/Home/Index">Home</a></li> 
+							<li><a href="~/Home/about">About</a></li>
+							<li><a href="~/Home/menu">MENU</a></li> 
+							<li><a href="~/Home/Event">Events</a></li> 
+							@*<li><a href="~/Home/portfolio">PORTFOLIO</a></li> *@
+							<li><a href="~/Home/contact">Contact</a></li>
+							<div class="clearfix"> </div>
+						</ul>
+					 </div>
+				</div>
+				<div class=" col-md-3 footer-grid">
+					<div class="Office Address">
+				        <h4>ADDRESS</h4>
+				       <ul class="bottom-icons">
+							<li><a class="home" href="#"><span> </span></a>79-D1,Main Bouleward Gulberg3, Lahore </li>
+							<!-- <li><a class="mail" href="mailto:info@example.com"><span> </span>123 int@example.com</a></li> -->
+							<li><a class="mbl" href="#"><span> </span></a> +92 42 35783042 </li>	
+							<div class="clearfix"> </div>	
+						</ul>
+					 </div>
+				</div>
+				<div class="col-md-3 footer-grid">
+					<!-- <h4>SUPPORT WITH</h4>
+						<div class="support">
+						   <input type="text" class="text" value="Enter email to reset it" onfocus="this.value = '';" onblur="if (this.value == 'Enter email to reset it') {this.value = 'Enter email to reset it';}">
+						<input type="submit" value="SUBMIT" class="botton">
+						     						     <p>Lorem ipsum dolor sit amet conse aliqua. Ut enim ad minim veniam Lorem ctetur adipisicing .</p>
+						</div>
+				    </div> -->
+			    	<div class="clearfix"> </div>	
+				</div>
+			</div>
+			<div class="copy-right">
+			  <div class="container">
+				 	 <p>Copyright &copy; 2016 All Rights Reserved Design by Muhammad Ahsan Saleem </p>
+			   </div>		
+
+			</div>		
+			<!--start-smoth-scrolling-->
+			<script type="text/javascript">
+			    jQuery(document).ready(function ($) {
+			        $(".scroll").click(function (event) {
+			            event.preventDefault();
+			            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			        });
+			    });
+								</script>
+							<!--start-smooth-scrolling-->
+						<script type="text/javascript">
+						    $(document).ready(function () {
+						        /*
+                                var defaults = {
+                                    containerID: 'toTop', // fading element id
+                                    containerHoverID: 'toTopHover', // fading element hover id
+                                    scrollSpeed: 1200,
+                                    easingType: 'linear' 
+                                };
+                                */
+
+						        $().UItoTop({ easingType: 'easeOutQuart' });
+
+						    });
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+    </body>
+    </html>
