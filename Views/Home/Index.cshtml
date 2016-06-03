@@ -1,0 +1,168 @@
+﻿
+
+
+
+
+
+
+
+
+
+<!--start-slider-->
+	<div class="slider-bg">
+				<div class="side wow bounceInRight" data-wow-delay="0.7s">
+					 <div  id="top" class="callbacks_container">
+							<ul class="rslides" id="slider4">
+                                @for (int i = 11; i <14; i++)
+                                { 
+                                <li>
+										<img src="~/Images/@(i.ToString()+".jpg")" class="img-responsive" alt="" />
+										<div class="caption1">
+										<div class="logo">
+											<a href="~/Home/Index"><h1>Liberty<span>Castle</span></h1></a>
+										</div>
+											<h2> Where Dreams Comes True</h2>	
+											
+										</div>
+									</li>
+                                }
+                                    
+
+									
+								 </ul>
+							</div>
+						</div>
+					</div>	
+				<!--- banner Slider starts Here --->
+	  			<script src="~/Scripts/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!----//End-slider-script---->
+				<div class="clearfix"> </div>
+</div>
+		<!--start-welcome-->
+		<div class="welcome-section">
+		   <div class="container">
+				 <div class="wel-grid">
+				   <div class="col-md-4 welcome-text">
+					   <h3>Welcome</h3>
+					   <h4>TO Liberty Castle</h4>
+					   <p>Make your event memorable</p>
+				   </div>
+					<div class="col-md-8 welcome-img">
+					   <img src="~/Images/4.jpg" class="img-responsive" alt="" />
+					</div>
+				   <div class="clearfix"> </div>
+			   </div>
+			    <div class="about-grid">
+				   <div class="col-md-4 about-img">
+					   <img src="~/Images/24.jpg" class="img-responsive" alt="" />
+					</div>
+					<div class="col-md-8 about-text">
+					   <h3>About</h3>
+					   <h4>Liberty Castle</h4>
+					   <p>It is located at one the prime Location In Lahore </p>
+				   </div>
+				   <div class="clearfix"> </div>
+			   </div>
+		    </div>
+		</div>
+		
+			
+			<link rel="stylesheet" href="~/Content/swipebox.css">
+				<script src="~/Scripts/jquery.swipebox.min.js"></script> 
+				<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+				</script>
+			<!--//swipebox Ends -->
+<!--/start-footer-->
+	<div class= "footer">
+		 <div class="container">                                                   
+			<div class="col-md-3 footer-grid">
+					<div class="logo two">
+						<a href="~/Home/index"><h3>Liberty<span>Castle</span></h3></a>
+					</div>
+				</div>
+				<div class=" col-md-3 footer-grid footer-grid2">
+					<div class="bottom-nav">
+					       <h4>LEARN</h4>
+							<ul>
+							<li><a class="active" href="~/Home/index">Home</a></li> 
+							<li><a href="~/Home/about">About</a></li>
+							<li><a href="~/Home/menu">MENU</a></li> 
+							<li><a href="~/Home/Event">Events</a></li> 
+							@*<li><a href="~/Home/portfolio">PORTFOLIO</a></li> *@
+							<li><a href="~/Home/contact">Contact</a></li>
+                            @* <li><a href="~/Home/SignUp">Schedule</a></li>*@ 
+							<div class="clearfix"> </div>
+						</ul>
+					 </div>
+				</div>
+				<div class=" col-md-3 footer-grid">
+					<div class="Office Address">
+				        <h4>ADDRESS</h4>
+				       <ul class="bottom-icons">
+							<li><a class="home" href="#"><span> </span></a>79-D1,Main Bouleward Gulberg3, Lahore</li>
+							<!-- <li><a class="mail" href="mailto:info@example.com"><span> </span>123 int@example.com</a></li> -->
+							<li><a class="mbl" href="#"><span> </span></a>+92 42 35783042</li>	
+							<div class="clearfix"> </div>	
+						</ul>
+					 </div>
+				</div>
+				
+			</div>
+			<div class="copy-right">
+			  <div class="container">
+				 	 <p>Copyright &copy; 2016 All Rights Reserved Design by Muhammad Ahsan Saleem</a> </p>
+			   </div>		
+
+			</div>		
+			<!--start-smoth-scrolling-->
+			<script type="text/javascript">
+								jQuery(document).ready(function($) {
+									$(".scroll").click(function(event){		
+										event.preventDefault();
+										$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+									});
+								});
+								</script>
+							<!--start-smooth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</body>
+</html>
